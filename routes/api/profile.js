@@ -246,4 +246,82 @@ router.delete("/experience/:exp_id", auth, async (req, res) => {
   }
 });
 
+// @route       PUT api/profile/education
+// @desc        Add profile education
+// @access      Private
+router.put(
+  "/education",
+  [
+    auth,
+    [
+      check("school", "school is required").not().isEmpty(),
+      check("degree", "degree is required").not().isEmpty(),
+      check("fieldofstudy", "fieldofstudy is required").not().isEmpty(),
+      check("from", "from is required").not().isEmpty(),
+    ],
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    //Destruct data from request body
+    const {
+      school,
+      degree,
+      fieldofstudy,
+      from,
+      to,
+      current,
+      description,
+    } = req.body;
+
+    //Creating new object with received data
+    const newEdu = {
+      school,
+      degree,
+      fieldofstudy,
+      from,
+      to,
+      current,
+      description,
+    };
+
+    try {
+      const profile = await Profile.findOne({ user: req.user.id });
+
+      profile.education.unshift(newEdu);
+      await profile.save();
+
+      res.json(profile);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).send("Server Error");
+    }
+  }
+);
+
+// @route       DELETE api/profile/education/:exp_id
+// @desc        Delete a education from profile
+// @access      Private
+router.delete("/education/:edu_id", auth, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ user: req.user.id });
+
+    const removeIndex = profile.education
+      .map((item) => item.id)
+      .indexOf(req.params.edu_id);
+
+    profile.education.splice(removeIndex, 1);
+
+    profile.save();
+
+    res.json(profile);
+  } catch (err) {
+    console.log(err.message);
+    return res.status(500).send("Server error");
+  }
+});
 module.exports = router;
