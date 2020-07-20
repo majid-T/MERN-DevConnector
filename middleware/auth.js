@@ -12,9 +12,9 @@ module.exports = (req, res, next) => {
 
   // Verify the token
   try {
-    const decoedToken = jwt.verify(token, config.get("jwtSecret"));
+    const decodedToken = jwt.verify(token, config.get("jwtSecret"));
     // console.log("[AUTH-MIDDLEWARE]:Decoded Token:", decoedToken);
-    req.user = decoedToken.user;
+    req.user = decodedToken.user;
     next();
   } catch (err) {
     console.log(err);
