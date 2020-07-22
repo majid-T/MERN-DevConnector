@@ -18,3 +18,4 @@ A Social media for developers- A repo for UDEMY course by Brad Traversy
 - [axios](https://www.npmjs.com/package/axios) For sending different HTTP method requests
 - [react-router](https://reactrouter.com/) - For declarative routing inside a react application
 - [moment](https://momentjs.com/) - For date and time formating
+- [uuid](https://www.npmjs.com/package/uuid) - For creation of random UUID
