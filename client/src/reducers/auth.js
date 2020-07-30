@@ -25,7 +25,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         ...payload,
-        isAythenticated: true,
+        isAuthenticated: true,
         loading: false,
       };
 
@@ -37,7 +37,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         token: null,
-        isAythenticated: false,
+        isAuthenticated: false,
         loading: false,
       };
 
