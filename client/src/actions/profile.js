@@ -175,7 +175,6 @@ export const deleteAccount = () => async (dispatch) => {
       dispatch({ type: ACCOUNT_DELETED });
 
       dispatch(setAlert("Your account has been permenantly deleted"));
-      dispatch(setAlert("Education removed", "success"));
     } catch (err) {
       dispatch({
         type: PROFILE_ERROR,
