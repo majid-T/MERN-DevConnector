@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Moement from "react-moment";
-import { connect } from "react-redux";
 import Moment from "react-moment";
+import { connect } from "react-redux";
 
 const Education = ({ education }) => {
   const educations = education.map((edu) => {
