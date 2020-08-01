@@ -5,6 +5,8 @@ import { getCurrentProfile } from "../../actions/profile";
 import Spinner from "../layout/Spinner";
 import { Link } from "react-router-dom";
 import Experience from "./Experience";
+import Education from "./Education";
+
 import DashboardActions from "./DashboardActions";
 
 const Dashboard = ({
@@ -28,6 +30,7 @@ const Dashboard = ({
         <>
           <DashboardActions />
           <Experience experience={profile.experience} />
+          <Education education={profile.education} />
         </>
       ) : (
         <>

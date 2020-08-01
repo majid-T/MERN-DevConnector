@@ -4,47 +4,47 @@ import Moement from "react-moment";
 import { connect } from "react-redux";
 import Moment from "react-moment";
 
-const Education = ({ experience }) => {
-  const experiences = experience.map((exp) => {
+const Education = ({ education }) => {
+  const educations = education.map((edu) => {
     return (
-      <td key={exp._id}>
-        <td>{exp.company}</td>
-        <td className="hide-sm">{exp.title}</td>
+      <tr key={edu._id}>
+        <td>{edu.school}</td>
+        <td className="hide-sm">{edu.degree}</td>
         <td>
-          <Moment format="YYY/MM/DD">{exp.from}</Moment> -{" "}
-          {exp.to === null ? (
+          <Moment format="YYYY/MM/DD">{edu.from}</Moment> -{" "}
+          {edu.to === null ? (
             " NOW"
           ) : (
-            <Moment format="YYY/MM/DD">{exp.to}</Moment>
+            <Moment format="YYYY/MM/DD">{edu.to}</Moment>
           )}
         </td>
         <td>
           <button className="btn btn-danger">Delete</button>
         </td>
-      </td>
+      </tr>
     );
   });
 
   return (
     <>
-      <h2 className="my-2">Experience Credentials</h2>
+      <h2 className="my-2">Education Credentials</h2>
       <table className="table">
         <thead>
           <tr>
-            <th>Company</th>
-            <th className="hide-sm">Title</th>
+            <th>School</th>
+            <th className="hide-sm">Degree</th>
             <th className="hide-sm">Years</th>
             <th />
           </tr>
         </thead>
-        <tbody>{experiences}</tbody>
+        <tbody>{educations}</tbody>
       </table>
     </>
   );
 };
 
 Education.propTypes = {
-  experience: PropTypes.array.isRequired,
+  education: PropTypes.array.isRequired,
 };
 
 export default Education;
