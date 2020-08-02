@@ -21,13 +21,13 @@ const ProfileEducation = ({
       <p>
         <strong>Description: </strong> {description}
       </p>
-      <div class="line"></div>
+      <div className="line"></div>
     </>
   );
 };
 
 ProfileEducation.propTypes = {
-  experience: PropTypes.object.isRequired,
+  education: PropTypes.object.isRequired,
 };
 
 export default ProfileEducation;
