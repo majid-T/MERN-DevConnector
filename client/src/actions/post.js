@@ -87,8 +87,6 @@ export const addPost = (formData) => async (dispatch) => {
   };
   try {
     const res = await axios.post("/api/posts", formData, config);
-    console.log(res);
-
     dispatch({
       type: ADD_POST,
       payload: res.data,
@@ -96,7 +94,6 @@ export const addPost = (formData) => async (dispatch) => {
 
     dispatch(setAlert("Post Created", "success"));
   } catch (err) {
-    console.log(err);
     dispatch({
       type: POST_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status },
