@@ -2,6 +2,11 @@
 
 A Social media for developers- A repo for UDEMY course by Brad Traversy
 
+<p align="center">
+  <img width="460" height="300" src="https://github.com/majid-T/MERN-DevConnector/tbd.gif">
+</p>
+This Repo is Under cunstraction!
+
 ### Technologies used in this project
 
 - [MongoDB-Atlas](https://www.mongodb.com/cloud/atlas) - Cloud noSQL document based DB
