@@ -1,6 +1,7 @@
 # MERN-DevConnector
 
 A Social media for developers- A repo for UDEMY course by Brad Traversy
+Project live demo [Here](https://majid-dev-connector.herokuapp.com/)
 
  <div align="center" style="background-color: lightgray;">
       <img
