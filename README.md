@@ -2,9 +2,32 @@
 
 A Social media for developers- A repo for UDEMY course by Brad Traversy
 
-<p align="center">
-  <img width="460" height="300" src="https://github.com/majid-T/MERN-DevConnector/blob/master/tbd.gif">
-</p>
+ <div align="center" style="background-color: lightgray;">
+      <img
+        src="./media/landingDemo.gif"
+        alt="landDemo"
+        width="68%"
+        height="68%"
+        style="border-radius: 5px;"
+      />
+  </div>
+  <div align="center" style="background-color: lightgray;">
+      <img
+        src="./media/postsDemo.gif"
+        alt="postDemo"
+        width="47%"
+        height="47%"
+        style="border-radius: 5px;"
+      />
+      <img
+        src="./media/profileDemo.gif"
+        alt="profDemo"
+        width="47%"
+        height="47%"
+        style="border-radius: 5px;"
+      />
+  </div>
+    
 This Repo is Under cunstraction!
 
 ### Technologies used in this project
