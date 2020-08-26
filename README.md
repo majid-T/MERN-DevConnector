@@ -28,8 +28,6 @@ Project live demo [Here](https://majid-dev-connector.herokuapp.com/)
         style="border-radius: 5px;"
       />
   </div>
-    
-This Repo is Under cunstraction!
 
 ### Technologies used in this project
 
